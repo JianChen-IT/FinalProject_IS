@@ -1,44 +1,27 @@
-﻿using System.Collections;
+﻿/*
+ Interactive Systems Final Project
+ Students: Jian Chen, Laia Auset & Aitor Rodriguez
+ Date: May 15, 2020
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MaterialDestroyer : MonoBehaviour
 {
-
-    //public Text countText;
-    //private int count;
-
-
-    // Start is called before the first frame update
+    /*Assigned to a gameobject to destroy the materials*/
     public List<string> tagFilter;
-    void Start()
-    {
-        //count = 0;
-        //SetCountText ();
 
-    }
-    private void OnTriggerEnter(Collider other) // 1
+    private void OnTriggerEnter(Collider other)
     {
         for (int i=0; i<tagFilter.Count; i++ ) {
-            if (other.CompareTag(tagFilter[i])) // 2
+            if (other.CompareTag(tagFilter[i]))
             {
-                Destroy(other.gameObject); // 3
-                //count = count + 1;
-                //SetCountText ();
+                Destroy(other.gameObject);
+
             }
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
-
-    /*void SetCountText ()
-    {
-        countText.text = "Frutas Perdidas: " + count.ToString ();
-       
-    }
-    */
 }

@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ Interactive Systems Final Project
+ Students: Jian Chen, Laia Auset & Aitor Rodriguez
+ Date: May 15, 2020
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,37 +11,14 @@ using UnityEngine.UI;
 public class FruitDestroyer : MonoBehaviour
 {
 
-	//public Text countText;
-    //private int count;
-
-
-    // Start is called before the first frame update
     public string tagFilter;
-    void Start()
+    /*Boundary set at the bottom of the game to destroy the fruits*/
+    private void OnTriggerEnter(Collider other)
     {
-    	//count = 0;
-        //SetCountText ();
-        
-    }
-    private void OnTriggerEnter(Collider other) // 1
-    {
-        if (other.CompareTag(tagFilter)) // 2
+        if (other.CompareTag(tagFilter))
         {
-            Destroy(other.gameObject); // 3
-            //count = count + 1;
-            //SetCountText ();
+            Destroy(other.gameObject);
+
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    /*void SetCountText ()
-    {
-        countText.text = "Frutas Perdidas: " + count.ToString ();
-       
-    }
-    */
 }

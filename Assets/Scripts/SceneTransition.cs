@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ Interactive Systems Final Project
+ Students: Jian Chen, Laia Auset & Aitor Rodriguez
+ Date: May 15, 2020
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,19 +13,14 @@ public class SceneTransition : MonoBehaviour
     public Animator transitionAnim;
     public Animator transitionMusic;
     public string sceneName;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space))
-        StartCoroutine(LoadScene());
-        
+        StartCoroutine(LoadScene());    
     }
+    /*Coroutine to do the transition between scenes*/
     IEnumerator LoadScene()
     {
         transitionAnim.SetTrigger("end");

@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ Interactive Systems Final Project
+ Students: Jian Chen, Laia Auset & Aitor Rodriguez
+ Date: May 15, 2020
+ NOTE: most of the code is not written from us. We only added a coroutine, called in take damage
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -62,6 +68,8 @@ public class PlayerStats : MonoBehaviour
                 onHealthChangedCallback.Invoke();
         }   
     }
+    /*Coroutine triggered when the game is over. It includes some fade out animations for the
+     visuals and the music. The score is also freezed to stop counting.*/
     IEnumerator LoadScene()
     {
         transitionAnim.SetTrigger("end");

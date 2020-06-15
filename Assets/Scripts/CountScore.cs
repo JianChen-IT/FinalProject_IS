@@ -1,15 +1,21 @@
-﻿using System.Collections;
+﻿/*
+ Interactive Systems Final Project
+ Students: Jian Chen, Laia Auset & Aitor Rodriguez
+ Date: May 15, 2020
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/*Counter that updates the scores*/
 public class CountScore : MonoBehaviour
 {
     public static int count=0;
     public Text countText;
     public bool mylock = false;
-    // Start is called before the first frame update
+
     void Start()
     {
         SetCountText();

@@ -8,8 +8,11 @@ using System.Diagnostics;
 public class TrackingReceiver : MonoBehaviour
 {
     //GameObjects to be controlled with Posenet
-    public GameObject leftWrist;
-    //private  GameObject rightWrist;
+    public GameObject left;
+    public GameObject right;
+    //public string bodyPart;
+    private string leftPart;
+    private string rightPart;
     //public GameObject wristR;
 
     //OSC Variables
@@ -41,17 +44,21 @@ public class TrackingReceiver : MonoBehaviour
     }
 
     void StartPose() {
+		leftPart="right"+ChooseOption.bodyPart;
+		rightPart="left"+ChooseOption.bodyPart;
+		UnityEngine.Debug.Log(leftPart);
         //pose.Add("rightWrist", Vector3.zero);
-        pose.Add("rightWrist", transform.position);
-        //pose.Add("rightWrist", Vector3.zero);
+        pose.Add(rightPart, transform.position);
+        pose.Add(leftPart, transform.position);
     }
     
 
     // Update is called once per frame
     void Update()
     {
-        leftWrist.transform.position = pose["rightWrist"];
-        //rightWrist.transform.position = pose["leftWrist"];
+    	UnityEngine.Debug.Log(leftPart);
+        left.transform.position = pose[leftPart];
+        right.transform.position = pose[rightPart];
         //wristR.transform.position = pose["rightWrist"];
 
     }
