@@ -7,7 +7,7 @@ Jian Chen 206064
 
 ## Ejecutable ##
 
-Para acceder al ejecutable, clickar en la carpeta "Executable" y seleccionar Dryland.exe
+Para acceder al ejecutable, clickar en la carpeta "Executable" y seleccionar Dryland.exe. *Es muy recomendable jugarlo con sonido, ya que la música de fondo le da el toque trágico al juego.*
 
 ## Controles ##
 
